@@ -1,6 +1,6 @@
 import Dexie from 'dexie'
 
-export const db = new Dexie('sns_db')
+export const db = new Dexie('photos_db')
 
 db.version(1).stores({
   categories: '++id, en_name,jp_name',
