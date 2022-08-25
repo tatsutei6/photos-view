@@ -301,8 +301,6 @@ export const DEFAULT_CATEGORY_DATA = [
 export const PHOTO_TOTAL = DEFAULT_PHOTO_DATA.length
 
 export const initDB = function() {
-
-
   for (const ele of DEFAULT_CATEGORY_DATA) {
     db.categories.add(ele)
   }
