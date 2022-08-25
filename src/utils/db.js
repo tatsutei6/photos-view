@@ -6,8 +6,8 @@ db.version(1).stores({
   categories: '++id, en_name,jp_name',
   photos: '++id,url,category_id,author,avatar,title,desc'
 })
-// const baseImgUrl = '/photos-view/dist/assets/images/'
-const baseImgUrl = '/src/assets/images/'
+const baseImgUrl = '/photos-view/dist/assets/images/'
+// const baseImgUrl = '/src/assets/images/'
 export const DEFAULT_PHOTO_DATA = [
   {
     id: 1,
