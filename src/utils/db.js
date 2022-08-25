@@ -309,4 +309,5 @@ export const initDB = function() {
   for (const ele of DEFAULT_PHOTO_DATA) {
     db.photos.add(ele)
   }
+  console.log('db init')
 }

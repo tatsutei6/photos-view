@@ -1,5 +1,5 @@
-import { computed, watch } from 'vue'
-import { PC_DEVICE_WIDTH, THEME_DARK, THEME_LIGHT, THEME_SYSTEM } from './constants'
+import {  watch } from 'vue'
+import { THEME_DARK, THEME_LIGHT, THEME_SYSTEM } from './constants'
 import { useStore } from 'vuex'
 
 /**
@@ -103,7 +103,6 @@ export const getAllImgSrc = (imgElements) => {
  * promiseAllを作成する
  */
 export const onCompleteLoadAllImgs = (imgSrcArray) => {
-  console.log('onCompleteLoadAllImgs.imgSrcArray',imgSrcArray)
   const loadImgPromiseArray = []
   imgSrcArray.forEach((imgSrc, index) => {
     // promiseAllを作成する
