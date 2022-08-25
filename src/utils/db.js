@@ -304,12 +304,14 @@ export const initDB = function() {
   db.categories.toArray().then(value => {
     if (value.length === 0) {
       db.categories.bulkAdd(DEFAULT_CATEGORY_DATA)
+      console.log('init categories')
     }
   })
 
   db.photos.toArray().then(value => {
     if (value.length === 0) {
       db.photos.bulkAdd(DEFAULT_PHOTO_DATA)
+      console.log('init photos')
     }
   })
 }
