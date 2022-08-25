@@ -4,7 +4,7 @@
     <div class='flex items-center'>
       <img
           class='header-logo'
-          src='src/assets/icons/vue.svg'
+          src='/src/assets/icons/vue.svg'
           alt='toHome' />
       <Search class='mr-1 guide-search'/>
       <Theme class='mr-2'/>
