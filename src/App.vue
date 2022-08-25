@@ -9,9 +9,11 @@
 import { initREM, initTheme, isMobileDevice } from '@/utils'
 import MobileHome from '@/views/MobileHome.vue'
 import PCHome from '@/views/PCHome.vue'
+import { initDB } from '@/utils/db'
 
 initREM()
 initTheme()
+initDB()
 </script>
 
 

@@ -301,12 +301,15 @@ export const DEFAULT_CATEGORY_DATA = [
 export const PHOTO_TOTAL = DEFAULT_PHOTO_DATA.length
 
 export const initDB = function() {
-  for (const ele of DEFAULT_CATEGORY_DATA) {
-    db.categories.add(ele)
-  }
+  db.categories.toArray().then(value => {
+    if (value.length === 0) {
+      db.categories.bulkAdd(DEFAULT_CATEGORY_DATA)
+    }
+  })
 
-  for (const ele of DEFAULT_PHOTO_DATA) {
-    db.photos.add(ele)
-  }
-  console.log('db init')
+  db.photos.toArray().then(value => {
+    if (value.length === 0) {
+      db.photos.bulkAdd(DEFAULT_PHOTO_DATA)
+    }
+  })
 }
