@@ -7,7 +7,7 @@ db.version(1).stores({
   photos: '++id,url,category_id,author,avatar,title,desc'
 })
 const baseImgUrl = '/photos-view/dist/assets/images/'
-// const baseImgUrl = '/src/assets/images/',
+// const baseImgUrl = '/src/assets/images/'
 export const DEFAULT_PHOTO_DATA = [
   {
     id: 1,
@@ -283,27 +283,27 @@ export const DEFAULT_PHOTO_DATA = [
     url: baseImgUrl + '33.jpeg'
   }
 ]
-
+export const DEFAULT_CATEGORY_DATA = [
+  {
+    id: 0,
+    en_name: 'all',
+    jp_name: '全て'
+  },
+  { id: 1, en_name: 'web_app_icon', jp_name: 'UI/UX' },
+  { id: 2, en_name: 'design', jp_name: 'デザイン' },
+  { id: 3, en_name: 'illustration', jp_name: 'イラスト' },
+  { id: 4, en_name: 'photography', jp_name: '撮影' },
+  { id: 5, en_name: 'games', jp_name: 'ゲーム' },
+  { id: 6, en_name: 'anime', jp_name: 'アニメ' },
+  { id: 7, en_name: 'industrial_design', jp_name: 'インダストリアルデザイン' },
+  { id: 8, en_name: 'classical_art', jp_name: '古典芸術' }
+]
 export const PHOTO_TOTAL = DEFAULT_PHOTO_DATA.length
 
 export const initDB = function() {
-  let categories = [
-    {
-      id: 0,
-      en_name: 'all',
-      jp_name: '全て'
-    },
-    { id: 1, en_name: 'web_app_icon', jp_name: 'UI/UX' },
-    { id: 2, en_name: 'design', jp_name: 'デザイン' },
-    { id: 3, en_name: 'illustration', jp_name: 'イラスト' },
-    { id: 4, en_name: 'photography', jp_name: '撮影' },
-    { id: 5, en_name: 'games', jp_name: 'ゲーム' },
-    { id: 6, en_name: 'anime', jp_name: 'アニメ' },
-    { id: 7, en_name: 'industrial_design', jp_name: 'インダストリアルデザイン' },
-    { id: 8, en_name: 'classical_art', jp_name: '古典芸術' }
-  ]
 
-  for (const ele of categories) {
+
+  for (const ele of DEFAULT_CATEGORY_DATA) {
     db.categories.add(ele)
   }
 
