@@ -305,7 +305,6 @@ export const initDB = function() {
     db.categories.add(ele)
   }
 
-
   for (const ele of DEFAULT_PHOTO_DATA) {
     db.photos.add(ele)
   }
