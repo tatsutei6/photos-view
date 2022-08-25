@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/web-types",
+  "framework": "vue",
+  "name": "vite-front",
+  "version": "1.0",
+  "contributions": {
+    "html": {
+      "attributes": [
+        {
+          "name": "v-lazy"
+        }
+      ]
+    }
+  }
+}
