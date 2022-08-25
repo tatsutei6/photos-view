@@ -51,11 +51,11 @@ export default {
 }
 </script>
 <script setup>
-import SvgIcon from '@/components/svg-icon/index.vue'
-import { useVModel, onClickOutside } from '@vueuse/core'
+import SvgIcon from '@/components/SvgIcon.vue'
+import { onClickOutside } from '@vueuse/core'
 import { ref, watch } from 'vue'
-import SearchHint from '@/components/search-hint/index.vue'
-import SearchHistory from '@/components/search-history/index.vue'
+import SearchHint from '@/components/SearchHint.vue'
+import SearchHistory from '@/components/SearchHistory.vue'
 import store from '@/store'
 
 // 親コンポーネントへ送るイベントを定義する

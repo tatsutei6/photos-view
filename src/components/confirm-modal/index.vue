@@ -43,7 +43,7 @@ export default {
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import TypeButton from '@/components/type-button/index.vue'
+import TypeButton from '@/components/TypeButton.vue'
 
 const props = defineProps({
   // タイトル

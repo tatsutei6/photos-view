@@ -12,7 +12,6 @@
       </div>
     </div>
   </div>
-  <!--  </div>-->
 </template>
 <script>
 export default {
@@ -20,8 +19,8 @@ export default {
 }
 </script>
 <script setup>
-import MobileNavigation from '@/components/navigation/mobile/index.vue'
-import PhotoList from '@/components/photo-list/index.vue'
+import MobileNavigation from '@/components/MobileNavigation.vue'
+import PhotoList from '@/components/PhotoList.vue'
 import { Dao } from '@/dao/Dao'
 import { ref } from 'vue'
 import { useStore } from 'vuex'

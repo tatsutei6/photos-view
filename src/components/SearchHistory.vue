@@ -37,9 +37,9 @@ export default {
 
 <script setup>
 import { useStore } from 'vuex'
-import SvgIcon from '@/components/svg-icon/index.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 import { ConfirmModal } from '@/components/confirm-modal/confirm-modal.js'
-import { MessageBox } from '@/components/message-box/message-box'
+
 // 親コンポーネントへ送るイベントを定義する
 const emits = defineEmits([EMITS_HISTORY_CLICK])
 // vuex store

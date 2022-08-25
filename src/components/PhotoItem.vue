@@ -35,7 +35,7 @@ export default {
 }
 </script>
 <script setup>
-import TypeButton from '@/components/type-button/index.vue'
+import TypeButton from '@/components/TypeButton.vue'
 import { saveAs } from 'file-saver'
 import { MessageBox } from '@/components/message-box/message-box'
 import { useFullscreen } from '@vueuse/core'

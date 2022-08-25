@@ -25,8 +25,7 @@ export default {
 import { onUnmounted, ref, watch } from 'vue'
 import { useIntersectionObserver, useVModel } from '@vueuse/core'
 import { useStore } from 'vuex'
-import SvgIcon from '@/components/svg-icon/index.vue'
-import { THEME_DARK } from '@/utils/constants'
+import SvgIcon from '@/components/SvgIcon.vue'
 
 const props = defineProps({
   // 写真をロード中か

@@ -7,8 +7,8 @@
 
 <script setup>
 import { initREM, initTheme, isMobileDevice } from '@/utils'
-import MobileHome from '@/views/mobile-home/index.vue'
-import PCHome from '@/views/pc-home/index.vue'
+import MobileHome from '@/views/MobileHome.vue'
+import PCHome from '@/views/PCHome.vue'
 
 initREM()
 initTheme()

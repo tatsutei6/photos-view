@@ -76,7 +76,7 @@ export default {
 </script>
 <script setup>
 import { computed } from 'vue'
-import SvgIcon from '@/components/svg-icon/index.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 
 const props = defineProps({
   icon: String,

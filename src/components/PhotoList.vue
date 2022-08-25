@@ -25,10 +25,10 @@ export default {
 <script setup>
 import { Dao } from '@/dao/Dao'
 import { onUnmounted, ref, watch } from 'vue'
-import Waterfall from '@/components/waterfall/index.vue'
-import PhotoItem from '@/components/photo-item/index.vue'
+import Waterfall from '@/components/Waterfall.vue'
+import PhotoItem from '@/components/PhotoItem.vue'
 import { isMobileDevice } from '@/utils'
-import InfiniteList from '@/components/infinite-list/index.vue'
+import InfiniteList from '@/components/InfiniteList.vue'
 import { PHOTO_TOTAL } from '@/utils/db'
 import { useStore } from 'vuex'
 

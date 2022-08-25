@@ -33,9 +33,9 @@ export default {
 }
 </script>
 <script setup>
-import Menu from '@/components/menu/index.vue'
-import Popup from '@/components/popup/index.vue'
-import SvgIcon from '@/components/svg-icon/index.vue'
+import Menu from '@/components/Menu.vue'
+import Popup from '@/components/Popup.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 import { onBeforeUpdate, ref, watch } from 'vue'
 import { useScroll } from '@vueuse/core'
 import { useStore } from 'vuex'

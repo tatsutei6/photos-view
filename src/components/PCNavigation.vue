@@ -31,7 +31,7 @@ export default {
 }
 </script>
 <script setup>
-import SvgIcon from '@/components/svg-icon/index.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 import { useStore } from 'vuex'
 import { ref } from 'vue'
 // vuex store

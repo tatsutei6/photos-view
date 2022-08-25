@@ -1,4 +1,3 @@
-import { ALL_CATEGORY_ITEM } from '@/utils/constants'
 import { Dao } from '@/dao/Dao'
 
 export default {

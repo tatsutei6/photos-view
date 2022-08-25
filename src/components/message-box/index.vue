@@ -27,7 +27,7 @@ export default {
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import SvgIcon from '@/components/svg-icon/index.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 import { CLOSE_DELAY } from '@/utils/constants'
 
 const props = defineProps({

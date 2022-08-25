@@ -22,10 +22,10 @@ export default {
 }
 </script>
 <script setup>
-import Header from '@/components/header/index.vue'
+import Header from '@/components/Header.vue'
 import Floating from '@/components/floating/index.vue'
-import PCNavigation from '@/components/navigation/pc/index.vue'
-import PhotoList from '@/components/photo-list/index.vue'
+import PCNavigation from '@/components/PCNavigation.vue'
+import PhotoList from '@/components/PhotoList.vue'
 import { useStore } from 'vuex'
 
 const store = useStore()

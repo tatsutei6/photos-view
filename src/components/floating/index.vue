@@ -51,8 +51,8 @@ export default {
 import Driver from 'driver.js'
 import 'driver.js/dist/driver.min.css'
 
-import SvgIcon from '@/components/svg-icon/index.vue'
-import Popover from '@/components/popover/index.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
+import Popover from '@/components/Popover.vue'
 import { initDB } from '@/utils/db'
 import { MessageBox } from '@/components/message-box/message-box'
 import { ConfirmModal } from '@/components/confirm-modal/confirm-modal'

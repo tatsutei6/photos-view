@@ -37,8 +37,8 @@ export default {
 import { computed, ref } from 'vue'
 
 import { THEME_DARK, THEME_LIGHT, THEME_SYSTEM } from '@/utils/constants'
-import Popover from '@/components/popover/index.vue'
-import SvgIcon from '@/components/svg-icon/index.vue'
+import Popover from '@/components/Popover.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 import { useStore } from 'vuex'
 // popover elementのレファレンス
 const popoverRef = ref(null)

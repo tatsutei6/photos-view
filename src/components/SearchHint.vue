@@ -48,10 +48,17 @@ const getHintData = async () => {
   }
   // 全ての写真データを取得する
   const photos = await Dao.getInstance().getAllPhotos()
+  hintData.value = []
   for (const ele of photos) {
     // 写真のタイトルにsearchTextを含む場合
     if (ele.title.indexOf(props.searchText) !== -1) {
-      hintData.value.push(ele)
+      // hintDataに追加する
+      const result = hintData.value.filter((item) => {
+        return item.id === ele.id
+      })
+      if (result.length === 0) {
+        hintData.value.push(ele)
+      }
     }
   }
 }

@@ -18,8 +18,8 @@ export default {
 }
 </script>
 <script setup>
-import Search from '@/components/search/index.vue'
-import Theme from '@/components/theme/index.vue'
+import Search from '@/components/Search.vue'
+import Theme from '@/components/Theme.vue'
 </script>
 
 <style lang='scss' scoped>
