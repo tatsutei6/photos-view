@@ -1,10 +1,10 @@
 <template>
   <div class='mobile-nav-container'>
+    <!-- ハンバガーボタン -->
+    <div class='mobile-hamburger-btn' @click='isOpenPopup = !isOpenPopup'>
+      <SvgIcon class='w-1.5 h-1.5' name='hamburger'></SvgIcon>
+    </div>
     <ul id='nav-ul' class='mobile-category-bar' ref='navUlRef'>
-      <!-- ハンバガーボタン -->
-      <li class='mobile-hamburger-btn' @click='isOpenPopup = !isOpenPopup'>
-        <SvgIcon class='w-1.5 h-1.5' name='hamburger'></SvgIcon>
-      </li>
       <!-- ハイライトスライド(選択ハイライト) -->
       <li
           class='mobile-category-slider'
@@ -130,7 +130,7 @@ onBeforeUpdate(() => {
 
 <style lang='scss' scoped>
 .mobile-nav-container {
-  @apply bg-white dark:bg-zinc-900 duration-500 sticky top-0 left-0 z-10;
+  @apply sticky bg-white dark:bg-zinc-900 duration-500 top-0 left-0 z-10;
 }
 
 .mobile-category-bar {

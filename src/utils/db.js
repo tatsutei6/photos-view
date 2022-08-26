@@ -1,13 +1,13 @@
 import Dexie from 'dexie'
 
 export const db = new Dexie('photos_db')
-
 db.version(1).stores({
   categories: '++id, en_name,jp_name',
   photos: '++id,url,category_id,author,avatar,title,desc'
 })
-const baseImgUrl = '/photos-view/dist/assets/images/'
-// const baseImgUrl = '/src/assets/images/'
+
+// const baseImgUrl = '/photos-view/dist/assets/images/'
+const baseImgUrl = '/src/assets/images/'
 export const DEFAULT_PHOTO_DATA = [
   {
     id: 1,
@@ -301,17 +301,21 @@ export const DEFAULT_CATEGORY_DATA = [
 export const PHOTO_TOTAL = DEFAULT_PHOTO_DATA.length
 
 export const initDB = function() {
-  db.categories.toArray().then(value => {
-    if (value.length === 0) {
-      db.categories.bulkAdd(DEFAULT_CATEGORY_DATA)
-      console.log('init categories')
-    }
-  })
-
-  db.photos.toArray().then(value => {
-    if (value.length === 0) {
-      db.photos.bulkAdd(DEFAULT_PHOTO_DATA)
-      console.log('init photos')
-    }
+  db.open().then((value) => {
+    console.log('db open success')
+    db.categories.toArray().then(value => {
+      if (value.length === 0) {
+        db.categories.bulkAdd(DEFAULT_CATEGORY_DATA)
+        console.log('init categories')
+      }
+    })
+    db.photos.toArray().then(value => {
+      if (value.length === 0) {
+        db.photos.bulkAdd(DEFAULT_PHOTO_DATA)
+        console.log('init photos')
+      }
+    })
+  }, (err) => {
+    console.error('failed to open db: ' + (err.stack || err))
   })
 }

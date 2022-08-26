@@ -2,8 +2,8 @@
   <div>
     <!-- 内容 -->
     <slot />
-    <div ref="targetRef" class="h-6 py-4">
-      <!-- 写真をロードするlogo-->
+    <div ref="targetRef" class="h-10 py-4">
+      <!-- loading logo-->
       <SvgIcon
         v-show="loading && !finished"
         class="w-4 h-4 mx-auto animate-spin"

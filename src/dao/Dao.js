@@ -10,25 +10,21 @@ export class Dao {
   }
 
   async getAllCategories() {
-    await db.open()
-    return await db.categories.toArray()
+    return db.categories.toArray()
   }
 
-
   async getAllPhotos() {
-    await db.open()
-    return await db.photos.toArray()
+    return db.photos.toArray()
   }
 
   async getPhotos(queryParam = { page: 1, count: 10 }) {
-    await db.open()
-    let allPhotos = await db.photos.toArray()
+    let data = await db.photos.toArray()
     if (queryParam.title) {
-      allPhotos = allPhotos.filter(item => item.title.indexOf(queryParam.title) !== -1)
+      data = data.filter(item => item.title.indexOf(queryParam.title) !== -1)
     }
-    const total = allPhotos.length
+    const total = data.length
     const start = (queryParam.page - 1) * queryParam.count
     const end = start + queryParam.count
-    return { total: total, data: allPhotos.slice(start, end) }
+    return { total: total, data: data.slice(start, end) }
   }
 }

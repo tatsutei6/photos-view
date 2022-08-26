@@ -11,9 +11,9 @@ import MobileHome from '@/views/MobileHome.vue'
 import PCHome from '@/views/PCHome.vue'
 import { initDB } from '@/utils/db'
 
+initDB()
 initREM()
 initTheme()
-initDB()
 </script>
 
 
