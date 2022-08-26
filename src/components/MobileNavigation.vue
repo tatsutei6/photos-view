@@ -130,7 +130,8 @@ onBeforeUpdate(() => {
 
 <style lang='scss' scoped>
 .mobile-nav-container {
-  @apply sticky bg-white dark:bg-zinc-900 duration-500 top-0 left-0 z-10;
+  // sticky
+  @apply fixed bg-white dark:bg-zinc-900 duration-500 top-0 left-0 z-10;
 }
 
 .mobile-category-bar {
