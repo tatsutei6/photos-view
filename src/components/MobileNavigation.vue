@@ -1,9 +1,5 @@
 <template>
   <div class='mobile-nav-container'>
-    <!-- ハンバガーボタン -->
-    <div class='mobile-hamburger-btn' @click='isOpenPopup = !isOpenPopup'>
-      <SvgIcon class='w-1.5 h-1.5' name='hamburger'></SvgIcon>
-    </div>
     <ul id='nav-ul' class='mobile-category-bar' ref='navUlRef'>
       <!-- ハイライトスライド(選択ハイライト) -->
       <li
@@ -19,6 +15,10 @@
           @click='onItemClick(item, index)'
       >
         {{ item.jp_name }}
+      </li>
+      <!-- ハンバガーボタン -->
+      <li class='mobile-hamburger-btn' @click='isOpenPopup = !isOpenPopup'>
+        <SvgIcon class='w-1.5 h-1.5' name='hamburger'></SvgIcon>
       </li>
     </ul>
     <!-- category popup menu-->
