@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "esnext",
-    "baseUrl": "."
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }

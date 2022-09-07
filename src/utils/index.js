@@ -1,4 +1,4 @@
-import {  watch } from 'vue'
+import { watch } from 'vue'
 import { THEME_DARK, THEME_LIGHT, THEME_SYSTEM } from './constants'
 import { useStore } from 'vuex'
 
@@ -73,7 +73,9 @@ const applyTheme = (theme) => {
  */
 export const initTheme = () => {
   const store = useStore()
-  watch(() => store.getters.themeType, applyTheme, {
+  watch(() => store.getters.themeType, (val) => {
+    applyTheme(val)
+  }, {
     // 初期化の時も実行
     immediate: true
   })
@@ -129,7 +131,7 @@ export const onCompleteLoadAllImgs = (imgSrcArray) => {
 }
 
 /**
- * 返回列高对象中的最小高度所在的列
+ * 一番低いコラムのindexを取得する
  */
 export const getMinimumHeightColumnIndex = (columnHeightArray) => {
   const minHeight = getMinimumHeight(columnHeightArray)
@@ -142,14 +144,14 @@ export const getMinimumHeightColumnIndex = (columnHeightArray) => {
 }
 
 /**
- * 返回列高对象中的最小的高度
+ * 一番低いコラムの高さを取得する
  */
 export const getMinimumHeight = (columnHeightArray) => {
   return Math.min(...columnHeightArray)
 }
 
 /**
- * 返回列高对象中的最大的高度
+ * 一番高いコラムの高さを取得する
  */
 export const getMaxHeight = (columnHeightArray) => {
   return Math.max(...columnHeightArray)
