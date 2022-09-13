@@ -12,32 +12,32 @@
       ></SvgIcon>
     </div>
     <!-- DB初期化 -->
-    <Popover class='flex items-center guide-setting absolute' position='top-left'>
-      <template #reference>
-        <div
-            class='floating-setting-popover group'>
-          <SvgIcon
-              name='setting'
-              class='w-2 h-2'
-              fillClass='fill-zinc-900 dark:fill-zinc-200 group-hover:fill-main'
-          ></SvgIcon>
-        </div>
-      </template>
+<!--    <Popover class='flex items-center guide-setting absolute' position='top-left'>-->
+<!--      <template #reference>-->
+<!--        <div-->
+<!--            class='floating-setting-popover group'>-->
+<!--          <SvgIcon-->
+<!--              name='setting'-->
+<!--              class='w-2 h-2'-->
+<!--              fillClass='fill-zinc-900 dark:fill-zinc-200 group-hover:fill-main'-->
+<!--          ></SvgIcon>-->
+<!--        </div>-->
+<!--      </template>-->
 
-      <div class='w-[140px] overflow-hidden'>
-        <div
-            class='floating-db-init'
-            @click='onClickInitDB'
-        >
-          <SvgIcon
-              name='warn'
-              class='w-1.5 h-1.5 mr-1'
-              fillClass='fill-zinc-900 dark:fill-zinc-300'
-          ></SvgIcon>
-          <span class='floating-db-init-text'>DBの初期化</span>
-        </div>
-      </div>
-    </Popover>
+<!--      <div class='w-[140px] overflow-hidden'>-->
+<!--        <div-->
+<!--            class='floating-db-init'-->
+<!--            @click='onClickInitDB'-->
+<!--        >-->
+<!--          <SvgIcon-->
+<!--              name='warn'-->
+<!--              class='w-1.5 h-1.5 mr-1'-->
+<!--              fillClass='fill-zinc-900 dark:fill-zinc-300'-->
+<!--          ></SvgIcon>-->
+<!--          <span class='floating-db-init-text'>DBの初期化</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </Popover>-->
   </div>
 
 </template>

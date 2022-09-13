@@ -1,12 +1,12 @@
 export default [
-  {
-    element: '.guide-setting',
-    popover: {
-      title: 'DB初期化',
-      description: '最初のご利用の時、こちらで、DB初期化を行いましょう',
-      position: 'left'
-    }
-  },
+  // {
+  //   element: '.guide-setting',
+  //   popover: {
+  //     title: 'DB初期化',
+  //     description: '最初のご利用の時、こちらで、DB初期化を行いましょう',
+  //     position: 'left'
+  //   }
+  // },
   {
     element: '.guide-search',
     popover: {
