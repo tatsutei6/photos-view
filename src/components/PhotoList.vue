@@ -78,7 +78,7 @@ const getPhotos = () => {
           total = value.total
           loading.value = false
         })
-  }, 500)
+  }, 1500)
 }
 
 /**
