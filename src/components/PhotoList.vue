@@ -73,8 +73,10 @@ const getPhotos = () => {
   Dao.getInstance()
       .getPhotos(queryParam)
       .then((value) => {
-        photos.value = [...photos.value, ...value.data]
-        total = value.total
+        setTimeout(() => {
+          photos.value = [...photos.value, ...value.data]
+          total = value.total
+        }, 800)
       }).catch((error) => {
     console.log(error)
   })

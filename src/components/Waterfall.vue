@@ -187,10 +187,12 @@ const waitImgComplete = () => {
  */
 const useItemHeight = () => {
   itemHeightArray = []
-  // クラス名は「waterfall-item」を取得する
+  // 調整値
+  const adjustment = 15
+      // クラス名は「waterfall-item」を取得する
   ;[...document.getElementsByClassName('waterfall-item')].forEach((el) => {
     // 「waterfall-item」の高さをitemHeightArrayに入れる
-    itemHeightArray.push(el.offsetHeight + 15)
+    itemHeightArray.push(el.offsetHeight + adjustment)
   })
   // 「waterfall-item」のポジションを生成する
   useItemLocation()
