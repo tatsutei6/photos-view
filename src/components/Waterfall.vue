@@ -98,7 +98,8 @@ let timeout
  * 各写真の様式を作る
  */
 const useItemStyle = (item) => {
-  const styleObj = { opacity: loading.value ? 0 : 1, width: itemWidth.value + 'px' }
+  // opacity: loading.value ? 0 : 1,
+  const styleObj = {  width: itemWidth.value + 'px' }
   if (item._style?.left != null) {
     styleObj.left = item._style.left + 'px'
   }
@@ -156,7 +157,7 @@ const waitImgComplete = () => {
     // containerDivRef elementの高さを0にする
     // containerHeight.value = 0
     // loadingをfalseにする
-    loading.value = false
+    // loading.value = false
     return
   }
   // 「waterfall-item」からクラス名は「photo-item-img」であるimg elementを取得する
@@ -173,7 +174,7 @@ const waitImgComplete = () => {
     })
     // 「waterfall-item」のポジションを生成する
     useItemLocation()
-    loading.value = false
+    // loading.value = false
   })
 }
 
