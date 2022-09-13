@@ -87,6 +87,7 @@ export const initTheme = () => {
 export const getImgElements = (itemElements) => {
   const imgElements = []
   itemElements.forEach((el) => {
+    console.log('getImgElements.el:', el.querySelectorAll('img.photo-item-img'))
     imgElements.push(...el.querySelectorAll('img.photo-item-img'))
   })
   return imgElements

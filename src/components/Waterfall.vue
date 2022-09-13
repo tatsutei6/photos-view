@@ -36,6 +36,7 @@ import {
   getMinimumHeightColumnIndex,
   onCompleteLoadAllImgs
 } from '@/utils'
+import { useVModel } from '@vueuse/core/index'
 
 const props = defineProps({
   // データ
@@ -92,7 +93,9 @@ const columnSpacingTotal = computed(() => {
 // 各写真の高さ
 let itemHeightArray = []
 // ロード状態
-const loading = ref(true)
+// const loading = ref(true)
+const loading = useVModel(props)
+defineEmits(['update:modelValue'])
 let timeout
 /**
  * 各写真の様式を作る
@@ -173,6 +176,7 @@ const waitImgComplete = () => {
     })
     // 「waterfall-item」のポジションを生成する
     useItemLocation()
+    console.log('waterfall.waitImgComplete.onCompleteLoadAllImgs')
     loading.value = false
   })
 }
@@ -260,6 +264,7 @@ onUnmounted(() => {
 watch(
     () => props.data,
     (newVal) => {
+      console.log('waterfall.watch.props.data')
       loading.value = true
       // props.dataの元素は全部「_style」がなければ、最初waterfallをアクセスするということだ
       const resetColumnHeight = newVal.every((item) => !item._style)

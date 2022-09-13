@@ -2,6 +2,7 @@
   <!-- 列表处理 -->
   <InfiniteList v-model='loading' :finished='finished' @onLoad='getPhotos' ref='photoListRef'>
     <Waterfall
+        v-model='loading'
         :data='photos'
         keyProp='id'
         :columns='isMobileDevice() ? 2 : 4'
@@ -12,7 +13,7 @@
         <!--  widthはpreloadの場合、photoの元サイズとPhotoItemのサイズの比例を計算するため -->
         <!--  比例で、PhotoItemのheightを計算する -->
         <!--  height = (width / photoWidth) * photoHeight  -->
-        <PhotoItem :data='item' :width='width'/>
+        <PhotoItem :data='item' :width='width' />
       </template>
     </Waterfall>
   </InfiniteList>
@@ -70,15 +71,16 @@ const getPhotos = () => {
   // queryParam.pageの初期値は０
   queryParam.page = queryParam.page + 1
   // setTimeoutを配置するのはリモートからデータを取得することを模擬するためだ
-  timeout=setTimeout(() => {
-    Dao.getInstance()
-        .getPhotos(queryParam)
-        .then((value) => {
-          photos.value = [...photos.value, ...value.data]
-          total = value.total
-          loading.value = false
-        })
-  }, 1500)
+  // timeout=setTimeout(() => {
+  Dao.getInstance()
+      .getPhotos(queryParam)
+      .then((value) => {
+        photos.value = [...photos.value, ...value.data]
+        total = value.total
+        // loading.value = false
+        console.log("getPhotos finished")
+      })
+  // }, 1500)
 }
 
 /**
@@ -136,8 +138,8 @@ watch(
 /**
  * タイマーをクリアする
  */
-onUnmounted(()=>{
-  if(timeout){
+onUnmounted(() => {
+  if (timeout) {
     clearTimeout(timeout)
   }
 })
