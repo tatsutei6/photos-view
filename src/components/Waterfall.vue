@@ -154,7 +154,7 @@ const waitImgComplete = () => {
   let itemElementArray = [...document.getElementsByClassName('waterfall-item')]
   if (itemElementArray.length === 0) {
     // containerDivRef elementの高さを0にする
-    containerHeight.value = 0
+    // containerHeight.value = 0
     // loadingをfalseにする
     loading.value = false
     return
