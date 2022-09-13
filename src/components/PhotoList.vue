@@ -76,7 +76,7 @@ const getPhotos = () => {
         setTimeout(() => {
           photos.value = [...photos.value, ...value.data]
           total = value.total
-        }, 800)
+        }, 1000)
       }).catch((error) => {
     console.log(error)
   })
