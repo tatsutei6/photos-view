@@ -101,7 +101,8 @@ let timeout
  * 各写真の様式を作る
  */
 const useItemStyle = (item) => {
-  const styleObj = { opacity: loading.value ? 0 : 1, width: itemWidth.value + 'px' }
+  // opacity: loading.value ? 0 : 1,
+  const styleObj = { width: itemWidth.value + 'px' }
   if (item._style?.left != null) {
     styleObj.left = item._style.left + 'px'
   }
@@ -176,7 +177,6 @@ const waitImgComplete = () => {
     })
     // 「waterfall-item」のポジションを生成する
     useItemLocation()
-    console.log('waterfall.waitImgComplete.onCompleteLoadAllImgs')
     loading.value = false
   })
 }
@@ -264,7 +264,6 @@ onUnmounted(() => {
 watch(
     () => props.data,
     (newVal) => {
-      console.log('waterfall.watch.props.data')
       loading.value = true
       // props.dataの元素は全部「_style」がなければ、最初waterfallをアクセスするということだ
       const resetColumnHeight = newVal.every((item) => !item._style)
@@ -288,7 +287,7 @@ watch(
     }
 )
 /**
- * 組積をリセットする
+ * リセットする
  */
 const reset = () => {
   loading.value = true
@@ -303,7 +302,7 @@ const reset = () => {
     props.data.forEach((item) => {
       item._style = null
     })
-  }, 500)
+  }, 1000)
 }
 
 /**
@@ -313,7 +312,7 @@ watch(
     () => props.columns,
     () => {
       if (props.preload) {
-        // 在 picturePreReading 为 true 的前提下，需要首先为列宽滞空，列宽滞空之后，会取消瀑布流渲染
+        // 在 preload 为 true 的前提下，需要首先为列宽设置为0，列宽设置为0之后，会取消瀑布流渲染
         itemWidth.value = 0
         // 等待页面渲染之后，重新执行计算。否则在 item 没有指定过高度的前提下，计算出的 item 高度会不正确
         nextTick(reset)

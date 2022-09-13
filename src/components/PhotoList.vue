@@ -70,17 +70,14 @@ const getPhotos = () => {
 
   // queryParam.pageの初期値は０
   queryParam.page = queryParam.page + 1
-  // setTimeoutを配置するのはリモートからデータを取得することを模擬するためだ
-  // timeout=setTimeout(() => {
   Dao.getInstance()
       .getPhotos(queryParam)
       .then((value) => {
         photos.value = [...photos.value, ...value.data]
         total = value.total
-        // loading.value = false
-        console.log("getPhotos finished")
-      })
-  // }, 1500)
+      }).catch((error) => {
+    console.log(error)
+  })
 }
 
 /**

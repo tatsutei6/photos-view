@@ -73,7 +73,6 @@ useIntersectionObserver(targetRef, ([{ isIntersecting }], observerElement) => {
 const emitLoad = () => {
   // ターゲット要素は底にある、且つロード状態はfalse、且つ、全ての写真のロード完成状態はfalse
   if (targetIsIntersecting.value && !loading.value && !props.finished) {
-    console.log('InfiniteList: emitLoad')
     // ロード状態はtrueにする
     loading.value = true
     // onLoadイベントを親コンポーネントへ送る
@@ -91,7 +90,7 @@ watch(loading, () => {
   // setTimeoutを配置するのはレンダーとuseIntersectionObserverを再実行するのを待つためだ
   timeout = setTimeout(() => {
     emitLoad()
-  }, 500)
+  }, 1000)
 })
 
 /**
