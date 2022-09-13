@@ -90,7 +90,7 @@ watch(loading, () => {
   // setTimeoutを配置するのはレンダーとuseIntersectionObserverを再実行するのを待つためだ
   timeout = setTimeout(() => {
     emitLoad()
-  }, 1000)
+  }, 400)
 })
 
 /**
