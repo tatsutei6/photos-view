@@ -1,3 +1,5 @@
 # photos-view
-## Demo Gif
-![image](https://github.com/tatsutei6/projects-mng/blob/main/projects-mng-demo-min.gif) 
+## PC Demo Gif
+![image](https://github.com/tatsutei6/photos-view/blob/main/photos-view-pc-demo-min.gif)
+## Mobile Demo Gif
+![image](https://github.com/tatsutei6/photos-view/blob/main/photos-view-mobile-demo-min.gif) 
