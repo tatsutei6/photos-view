@@ -10,7 +10,7 @@
     <template v-if='itemWidth && data.length'>
       <!-- left、topを計算する -->
       <div
-          class='waterfall-item'
+          class='waterfall-item absolute duration-300'
           v-for='(item) in data'
           :key='keyProp ? item[keyProp] : item.id'
           :style='useItemStyle(item)'
@@ -36,7 +36,7 @@ import {
   getMinimumHeightColumnIndex,
   onCompleteLoadAllImgs
 } from '@/utils'
-import { useVModel } from '@vueuse/core/index'
+import { useVModel } from '@vueuse/core'
 
 const props = defineProps({
   // データ
